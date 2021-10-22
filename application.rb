@@ -1,5 +1,8 @@
 require_relative "car.rb"
 
+puts "hello"
+
+
 config = {
   max_rpm: 8000,
   torque: 4100,
