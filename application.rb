@@ -1,6 +1,5 @@
 require_relative "car.rb"
 
-puts "hello"
 
 
 config = {
