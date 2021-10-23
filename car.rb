@@ -1,10 +1,14 @@
-require_relative "controller.rb"
+require_relative "controller"
+require_relative "configurator"
+require_relative "view/view"
+
 
 class Car
-  attr_reader :controller
+  attr_reader :controller, :config
 
   def initialize(car_model)
     @controller = Controller.new(car_model)
+    @config = Configurator.new(car_model)
   end
 
   def rpm
@@ -39,9 +43,6 @@ class Car
     controller.max_speed
   end
 
-
-  #----------------------------
-
   def eng_start
     controller.eng_start
   end
@@ -56,6 +57,19 @@ class Car
 
   def gear_down
     controller.gear_down
+  end
+
+
+
+    #----------------------------
+
+
+  def show_config
+    config.show_config
+  end
+
+  def change_config(value)
+    config.change_config(value)
   end
 
 end

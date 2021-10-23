@@ -21,7 +21,7 @@ class << self
     puts "  2. No"
     i = View.user_input
     remove(3)
-    return i
+    true if i == '1'
   end
 
   def change_list
