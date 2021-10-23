@@ -3,8 +3,8 @@ require_relative "controller.rb"
 class Car
   attr_reader :controller
 
-  def initialize(config)
-    @controller = Controller.new(config)
+  def initialize(car_model)
+    @controller = Controller.new(car_model)
   end
 
   def get_rpm

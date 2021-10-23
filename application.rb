@@ -1,15 +1,18 @@
-require_relative "car.rb"
+require_relative "car"
+require_relative "model/car_model"
+
+car_model = CarModel.new
+car1 = Car.new(car_model)
 
 
 
-config = {
-  max_rpm: 8000,
-  torque: 4100,
-  max_gear: 6,
-  max_speed: 210
-}
 
-car1 = Car.new(config)
+
+
+
+
+
+
 
 puts "RPM       --> #{car1.get_rpm}"
 puts "MAX RPM   --> #{car1.get_max_rpm}"
