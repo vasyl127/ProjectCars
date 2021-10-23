@@ -6,11 +6,11 @@ class CarService
     @car_model = car_model
   end
 
-  def get_speed
+  def speed
     car_model.speed
   end
 
-  def get_max_speed
+  def max_speed
     car_model.max_speed
   end
 

@@ -7,32 +7,36 @@ class Car
     @controller = Controller.new(car_model)
   end
 
-  def get_rpm
-    controller.get_rpm
+  def rpm
+    controller.rpm
   end
 
-  def get_max_rpm
-    controller.get_max_rpm
+  def add_rpm(value)
+    controller.add_rpm(value)
   end
 
-  def get_torque
-    controller.get_torque
+  def max_rpm
+    controller.max_rpm
   end
 
-  def get_gear
-    controller.get_gear
+  def torque
+    controller.torque
   end
 
-  def get_max_gear
-    controller.get_max_gear
+  def gear
+    controller.gear
   end
 
-  def get_speed
-    controller.get_speed
+  def max_gear
+    controller.max_gear
   end
 
-  def get_max_speed
-    controller.get_max_speed
+  def speed
+    controller.speed
+  end
+
+  def max_speed
+    controller.max_speed
   end
 
 

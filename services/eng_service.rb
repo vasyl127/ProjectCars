@@ -8,15 +8,24 @@ class EngService
     @car_model = car_model
   end
 
-  def get_rpm
+  def rpm
     car_model.rpm
   end
 
-  def get_max_rpm
+  def add_rpm(value)
+    if car_model.max_rpm >= car_model.rpm + value
+      car_model.ch_rpm(value+car_model.rpm)
+    else
+      car_model.ch_rpm(car_model.max_rpm)
+    end
+
+  end
+
+  def max_rpm
     car_model.max_rpm
   end
 
-  def get_torque
+  def torque
     car_model.torque
   end
 

@@ -13,35 +13,37 @@ class Controller
     @gearbox_service = GearboxService.new(car_model)
   end
 
-  def get_rpm
-    eng_service.get_rpm
+  def rpm
+    eng_service.rpm
   end
 
-  def get_max_rpm
-    eng_service.get_max_rpm
+  def add_rpm(value)
+    eng_service.add_rpm(value)
   end
 
-  def get_torque
-    eng_service.get_torque
+  def max_rpm
+    eng_service.max_rpm
   end
 
-  def get_gear
-    gearbox_service.get_gear
+  def torque
+    eng_service.torque
   end
 
-  def get_max_gear
-    gearbox_service.get_max_gear
+  def gear
+    gearbox_service.gear
   end
 
-  def get_speed
-    car_service.get_speed
+  def max_gear
+    gearbox_service.max_gear
   end
 
-  def get_max_speed
-    car_service.get_max_speed
+  def speed
+    car_service.speed
   end
 
-#--------------------------
+  def max_speed
+    car_service.max_speed
+  end
 
   def eng_start
     eng_service.eng_start

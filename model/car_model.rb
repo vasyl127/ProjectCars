@@ -1,14 +1,14 @@
 class CarModel
   attr_reader :rpm, :torque, :gear, :max_gear, :max_rpm, :speed, :max_speed
 
-  def initialize
+  def initialize(param)
     @rpm = 0
     @gear = 0
     @speed = 0
-    @torque = 4100
-    @max_gear = 6
-    @max_rpm = 7000
-    @max_speed = 220
+    @torque = param.torque
+    @max_gear = param.max_gear
+    @max_rpm = param.max_rpm
+    @max_speed = param.max_speed
   end
 
   def ch_rpm(value)

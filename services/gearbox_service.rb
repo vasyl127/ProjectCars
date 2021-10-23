@@ -8,11 +8,11 @@ class GearboxService
     @car_model = car_model
   end
 
-  def get_gear
+  def gear
     car_model.gear
   end
 
-  def get_max_gear
+  def max_gear
     car_model.max_gear
   end
 
