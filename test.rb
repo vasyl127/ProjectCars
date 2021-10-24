@@ -19,7 +19,13 @@ end
 end
 View.remove(1)
 
+drag = Drag.new(60, car1, car2)
+drag.start
+
+
+
 car1.show_config
+puts "Speed --> #{car1.speed}"
 puts "-"*60
 puts "Engine start"
 car1.eng_start
@@ -30,6 +36,7 @@ car1.gear_up
 puts "CAR1: Gear      --> #{car1.gear}"
 puts "-"*60
 car2.show_config
+puts "Speed --> #{car2.speed}"
 puts "-"*60
 puts "Engine start"
 car2.eng_start
@@ -38,3 +45,5 @@ car2.gear_up
 car2.gear_up
 puts "CAR2: Gear      --> #{car2.gear}"
 puts "-"*60
+car1.show_full_params
+car2.show_full_params

@@ -1,6 +1,5 @@
 require_relative "controller"
 require_relative "configurator"
-require_relative "view/view"
 
 
 class Car
@@ -39,8 +38,28 @@ class Car
     controller.speed
   end
 
+  def add_speed(value)
+    controller.add_speed(value)
+  end
+
   def max_speed
     controller.max_speed
+  end
+
+  def shift_speed
+    controller.shift_speed
+  end
+
+  def odo
+    controller.odo
+  end
+
+  def ch_odo
+    controller.ch_odo
+  end
+
+  def shift_odo
+    controller.shift_odo
   end
 
   def eng_start
@@ -59,6 +78,9 @@ class Car
     controller.gear_down
   end
 
+  def shift_gear
+    controller.shift_gear
+  end
 
 
     #----------------------------
@@ -70,6 +92,10 @@ class Car
 
   def change_config(value)
     config.change_config(value)
+  end
+
+  def show_full_params
+    config.show_full_params
   end
 
 end

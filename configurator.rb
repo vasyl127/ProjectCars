@@ -8,12 +8,28 @@ class Configurator
   end
 
   def show_config
-    puts " Car params:
+    puts " Car config:
 MAX RPM   --> #{car_model.max_rpm}
 Torque    --> #{car_model.torque}
 Max Gear  --> #{car_model.max_gear}
+Max Speed --> #{car_model.max_speed}"
+    print "\n[ Press Enter to continue ]"
+    i = gets.chomp()
+    View.remove(7)
+  end
+
+  def show_full_params
+    puts " Car params:
+RPM       --> #{car_model.rpm}
+MAX RPM   --> #{car_model.max_rpm}
+Torque    --> #{car_model.torque}
+Max Gear  --> #{car_model.max_gear}
+Speed     --> #{car_model.speed}
 Max Speed --> #{car_model.max_speed}
-    "
+Odometr   --> #{car_model.odo}"
+print "\n[ Press Enter to continue ]"
+i = gets.chomp()
+View.remove(10)
   end
 
   def change_config(value)

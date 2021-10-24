@@ -1,4 +1,3 @@
-require_relative "../model/car_model"
 
 
 class EngService

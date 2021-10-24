@@ -41,8 +41,28 @@ class Controller
     car_service.speed
   end
 
+  def add_speed(value)
+    car_service.add_speed(value)
+  end
+
   def max_speed
     car_service.max_speed
+  end
+
+  def shift_speed
+    car_service.shift_speed
+  end
+
+  def odo
+    car_service.odo
+  end
+
+  def ch_odo
+    car_service.ch_odo
+  end
+
+  def shift_odo
+    car_service.shift_odo
   end
 
   def eng_start
@@ -59,6 +79,10 @@ class Controller
 
   def gear_down
     gearbox_service.gear_down
+  end
+
+  def shift_gear
+    gearbox_service.shift_gear
   end
 
 end
