@@ -30,11 +30,11 @@ class Drag
 
   def result
     if car1.odo > car2.odo
-      puts "------== CAR 1 WIN ==------"
+      puts "| --------== CAR 1 WIN ==-------- |"
     elsif car1.odo > car2.odo
-      puts "------== CAR 2 WIN ==------"
+      puts "| --------== CAR 2 WIN ==-------- |"
     else car1.odo == car2.odo
-      puts "------== Draw ==------"
+      puts "| -----------== Draw ==---------- |"
     end
     cars_param
   end
