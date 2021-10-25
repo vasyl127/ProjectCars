@@ -1,7 +1,7 @@
 class CarModel
-  attr_reader :rpm, :torque, :gear, :max_gear, :max_rpm, :speed, :max_speed, :odo
+  attr_reader :rpm, :torque, :gear, :max_gear, :max_rpm, :speed, :max_speed, :odo, :name
 
-  def initialize
+  def initialize(name)
     @rpm = 0
     @gear = 0
     @speed = 0
@@ -10,6 +10,7 @@ class CarModel
     @max_gear = 6
     @max_rpm = 5000
     @max_speed = 210
+    @name = name
   end
 
   def ch_odo(value)
@@ -29,7 +30,7 @@ class CarModel
   end
 
   def ch_torque(value)
-    @torque = value
+    @torque = value.to_i
   end
 
   def ch_max_gear(value)

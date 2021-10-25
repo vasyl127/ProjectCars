@@ -6,6 +6,10 @@ class CarService
     @car_model = car_model
   end
 
+  def car_name
+    car_model.name
+  end
+
   def speed
     car_model.speed
   end

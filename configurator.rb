@@ -7,6 +7,17 @@ class Configurator
     @car_model = car_model
   end
 
+  def change_config
+    puts "------== #{car_model.name} ==------"
+    if View.change?
+    while change_list(View.change_list)
+      show_config
+    end
+    end
+    View.remove(1)
+
+  end
+
   def show_config
     puts " Car config:
 MAX RPM   --> #{car_model.max_rpm}
@@ -32,7 +43,7 @@ i = gets.chomp()
 View.remove(10)
   end
 
-  def change_config(value)
+  def change_list(value)
     case value
     when "1"
       ch_max_rpm

@@ -82,16 +82,23 @@ class Car
     controller.shift_gear
   end
 
+  def car_name
+    controller.car_name
+  end
+
 
     #----------------------------
 
+  def change_config
+    config.change_config
+  end
 
   def show_config
     config.show_config
   end
 
-  def change_config(value)
-    config.change_config(value)
+  def change_list(value)
+    config.change_list(value)
   end
 
   def show_full_params

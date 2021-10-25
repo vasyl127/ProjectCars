@@ -20,18 +20,33 @@ class Drag
       storage.each_pair do |k, car|
         car.add_rpm(500)
         car.shift_gear
-        puts "#{k} --> rpm: #{car.rpm}"
-        puts "#{k} --> gear: #{car.gear}"
         car.shift_speed
         car.shift_odo
-        puts "#{k} --> speed: #{car.speed}"
-        puts "#{k} --> odo: #{car.odo}"
-        # car.add_odo
       end
       t+=1
     end
-
+    result
   end
 
+  def result
+    if car1.odo > car2.odo
+      puts "------== CAR 1 WIN ==------"
+    elsif car1.odo > car2.odo
+      puts "------== CAR 2 WIN ==------"
+    else car1.odo == car2.odo
+      puts "------== Draw ==------"
+    end
+    cars_param
+  end
 
+  def cars_param
+    puts "| ------== Drag time: #{time} ==------ |
+| ---= #{car1.car_name} =--- | ---= #{car2.car_name} =--- |
+| Odometr: #{car1.odo}  | Odometr: #{car2.odo}  |
+| Speed: #{car1.speed}     | Speed: #{car1.speed}     |
+|---------------------------------|"
+  print "\n[ Press Enter to continue ]"
+  i = gets.chomp()
+  View.remove(9)
+  end
 end

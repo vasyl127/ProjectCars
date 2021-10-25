@@ -65,6 +65,10 @@ class Controller
     car_service.shift_odo
   end
 
+  def car_name
+    car_service.car_name
+  end
+
   def eng_start
     eng_service.eng_start
   end
