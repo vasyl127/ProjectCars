@@ -43,7 +43,7 @@ class Drag
     puts "| ------== Drag time: #{time} ==------ |
 | ---= #{car1.car_name} =--- | ---= #{car2.car_name} =--- |
 | Odometr: #{car1.odo}  | Odometr: #{car2.odo}  |
-| Speed: #{car1.speed}     | Speed: #{car1.speed}     |
+| Speed: #{car1.speed}     | Speed: #{car2.speed}     |
 |---------------------------------|"
   print "\n[ Press Enter to continue ]"
   i = gets.chomp()

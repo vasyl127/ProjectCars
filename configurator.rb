@@ -72,15 +72,15 @@ View.remove(10)
     View.remove(1)
   end
 
-  def ch_max_speed
-    puts 'Enter new Speed parametr'
-    car_model.ch_max_speed(View.user_input)
-    View.remove(1)
-  end
-
   def ch_torque
     puts 'Enter new Torque parametr'
     car_model.ch_torque(View.user_input)
+    View.remove(1)
+  end
+
+  def ch_max_speed
+    puts 'Enter new Speed parametr'
+    car_model.ch_max_speed(View.user_input)
     View.remove(1)
   end
 end
