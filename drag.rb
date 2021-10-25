@@ -47,6 +47,6 @@ class Drag
 |---------------------------------|"
   print "\n[ Press Enter to continue ]"
   i = gets.chomp()
-  View.remove(9)
+  View.remove(8)
   end
 end
